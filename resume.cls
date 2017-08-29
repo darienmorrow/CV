@@ -30,10 +30,15 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 
+% text
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}   % ensure cm-super package is installed. If not, fonts will be rastered
+\renewcommand{\familydefault}{\sfdefault} % switch default to sans-serif
+
+% footer
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt} % turn off top header line
 \renewcommand{\footrulewidth}{1pt}
-
 \pagestyle{fancy}
 \lhead{}
 \chead{}
@@ -42,9 +47,13 @@
 \cfoot{}
 \rfoot{\thepage}
 
+% lists
 \usepackage{enumitem}
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
 \renewcommand\labelitemi{$\cdot$}
+\setlist{nosep} 
+ % reverse numbering package (requires two renders to work
+\usepackage[leftmargin = 0 pt]{etaremune})
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -96,7 +105,9 @@
 
 \let\ori@document=\document
 \renewcommand{\document}{
+
   \ori@document  % Begin document
+{\renewcommand{\familydefault}{\rmdefault} % change heading font to serif
   \printname % Print the name specified with \name
   \@ifundefined{@addressone}{}{ % Print the first address if specified
     \printaddress{\@addressone}}
@@ -105,7 +116,7 @@
      \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
 }
-
+}
 %----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
 %----------------------------------------------------------------------------------------
