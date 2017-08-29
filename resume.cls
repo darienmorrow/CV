@@ -52,8 +52,8 @@
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
 \renewcommand\labelitemi{$\cdot$}
 \setlist{nosep} 
- % reverse numbering package (requires two renders to work
-\usepackage[leftmargin = 0 pt]{etaremune})
+ % reverse numbering package (requires two renders to work)
+\usepackage[leftmargin = 0 pt]{etaremune}
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
