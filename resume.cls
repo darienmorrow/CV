@@ -15,6 +15,7 @@
 % without any warranty.
 %
 % Created by Trey Hunner and modified by www.LaTeXTemplates.com
+%
 % Additional modification by Darien Morrow
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,7 +38,7 @@
 \lhead{}
 \chead{}
 \rhead{}
-\lfoot{\AuthorName's CV. Last updated \today}
+\lfoot{\AuthorLastName  CV. \today}
 \cfoot{}
 \rfoot{\thepage}
 
@@ -123,6 +124,7 @@
   \end{list}
 }
 
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
@@ -138,6 +140,14 @@
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
+}
+
+\newenvironment{rSubsectionlistless}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {#4} % Italic job title and location
+  }\smallskip
 }
 
 
