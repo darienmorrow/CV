@@ -38,7 +38,7 @@
 % footer
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt} % turn off top header line
-\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 \lhead{}
 \chead{}
