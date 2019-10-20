@@ -24,7 +24,7 @@
 
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
-\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry} % Document margins
+\usepackage[left=.75in,top=.75in,right=.75in,bottom=.75in]{geometry} % Document margins
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
@@ -43,7 +43,7 @@
 \lhead{}
 \chead{}
 \rhead{}
-\lfoot{\AuthorLastName  CV. \today}
+\lfoot{\AuthorLastName  Resume. \today}
 \cfoot{}
 \rfoot{\thepage}
 
@@ -53,7 +53,7 @@
 \renewcommand\labelitemi{$\cdot$}
 \setlist{nosep} 
  % reverse numbering package (requires two renders to work)
-\usepackage[leftmargin = 0 pt]{etaremune}
+\usepackage[leftmargin = 0 pt, itemsep=0pt]{etaremune}
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -125,7 +125,7 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
+  %\sectionskip
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
@@ -165,9 +165,9 @@
 
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\huge} % Size of the name at the top of the document
+\def\namesize{\Large} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\bigskip} % The space after your name at the top
+\def\nameskip{\smallskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
 
