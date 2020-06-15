@@ -43,7 +43,7 @@
 \lhead{}
 \chead{}
 \rhead{}
-\lfoot{\AuthorLastName  Resume. \today}
+\lfoot{\AuthorLastName  \resumetype \today}
 \cfoot{}
 \rfoot{\thepage}
 
